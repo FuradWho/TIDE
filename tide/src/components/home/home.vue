@@ -1,6 +1,6 @@
 <template>
   <div class="e-div-1">
-    <div style="float: left; width: 100px; margin-left: 100px">
+    <div style="float: left; width: 100px; margin-left: 180px">
       <img class="logo" src="../../assets/LOGO/logo.png" style="width: 200px" />
     </div>
     <el-tabs
@@ -21,71 +21,56 @@
   <div
     class="scroll-content"
     @scroll="onScroll"
-    :style="
-      'height:' + contentStyleObj.height
-    "
+    :style="'height:' + contentStyleObj.height"
   >
-    <!-- 用户管理 -->
     <div :ref="tabs[0].refName" class="scroll-item">
       <div>
         <about></about>
       </div>
     </div>
-    <!-- 配置管理 -->
     <div :ref="tabs[1].refName" class="scroll-item">
-      <div class="line-name">
-        <h2>{{ tabs[1].name }}</h2>
-      </div>
       <div>
-        <about></about>
+        <market></market>
       </div>
     </div>
-    <!-- 角色管理 -->
-    <div
-      :ref="tabs[2].refName"
-      class="scroll-item"
-    >
-      <div class="line-name">
-        <h2>{{ tabs[2].name }}</h2>
-      </div>
+    <div :ref="tabs[2].refName" class="scroll-item">
       <div>
-        <about></about>
-      </div>
-    </div>
-    <!-- 角色管理2 -->
-    <div
-      :ref="tabs[3].refName"
-      class="scroll-item"
-    >
-      <div class="line-name">
-        <h2>{{ tabs[3].name }}</h2>
-      </div>
-      <div>
-        <about></about>
+        <services></services>
       </div>
     </div>
 
-    <div
-      :ref="tabs[4].refName"
-      class="scroll-item"
-    >
-      <div class="line-name">
-        <h2>{{ tabs[4].name }}</h2>
-      </div>
+    <div :ref="tabs[3].refName" class="scroll-item">
       <div>
-        <about></about>
+        <partnership></partnership>
       </div>
+    </div>
+
+    <div :ref="tabs[4].refName" class="scroll-item">
+      <div>
+        <team></team>
+      </div>
+    </div>
+    
+    <div style="width: 100%;height:414px;background-color:#3D86C6;">
     </div>
   </div>
 </template>
    
-   <script>
+<script>
 import about from "../about/about.vue";
+import market from "../market/market.vue";
+import partnership from "../partnership/partnership.vue";
+import services from "../services/services.vue";
+import team from "../team/team.vue";
 export default {
   name: "index",
   props: {},
   components: {
     about,
+    market,
+    partnership,
+    services,
+    team
   },
   data() {
     return {
@@ -141,12 +126,12 @@ export default {
       // let distance = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset // 滚动条距离滚动区域顶部的距离(滚动区域为窗口)
       // 滚动动画实现, 使用setTimeout的递归实现平滑滚动，将距离细分为50小段，10ms滚动一次
       // 计算每一小段的距离
-      let step = totalY / 50;
+      let step = totalY / 100;
       if (totalY > distance) {
         smoothDown(document.querySelector(".scroll-content"));
       } else {
         let newTotal = distance - totalY;
-        step = newTotal / 50;
+        step = newTotal / 100;
         smoothUp(document.querySelector(".scroll-content"));
       }
 
@@ -155,7 +140,7 @@ export default {
         if (distance < totalY) {
           distance += step;
           element.scrollTop = distance;
-          setTimeout(smoothDown.bind(this, element), 6);
+          setTimeout(smoothDown.bind(this, element), 12);
         } else {
           element.scrollTop = totalY;
         }
@@ -166,7 +151,7 @@ export default {
         if (distance > totalY) {
           distance -= step;
           element.scrollTop = distance;
-          setTimeout(smoothUp.bind(this, element), 6);
+          setTimeout(smoothUp.bind(this, element), 12);
         } else {
           element.scrollTop = totalY;
         }
@@ -179,7 +164,7 @@ export default {
         // 判断滚动条滚动距离是否大于当前滚动项可滚动距离
         let judge =
           e.target.scrollTop >=
-          scrollItems[i].offsetTop - scrollItems[0].offsetTop - 450;
+          scrollItems[i].offsetTop - scrollItems[0].offsetTop - 500;
         if (judge) {
           this.tabIndex = i.toString();
           // 找对应的tab-name值
@@ -197,7 +182,7 @@ export default {
    
 <style lang="scss" scoped>
 ::v-deep.customer-tab {
- // width: 60%;
+  // width: 60%;
   //   height: 50px;
   //   background-color: #f5f7fa;
   padding: 4px;
@@ -205,13 +190,14 @@ export default {
 }
 
 .e-div-1 {
-  margin-top: 35px;
+  margin-top: 26px;
 }
 
-.scroll-content{
-    margin-top: 30px;
-    overflow-x: hidden; 
-    overflow-y: auto;
+.scroll-content {
+  margin-top: 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom:25px;
 }
 
 // .scroll-item{
@@ -234,8 +220,8 @@ export default {
       //   font-size: 20px;
     }
     .is-active {
-      border-radius: 35px;
-      background-color: #005bd9;
+      border-radius: 45px;
+      background-color: #3D86C6;
       color: #fff;
     }
   }
