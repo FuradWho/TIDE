@@ -27,9 +27,6 @@
   >
     <!-- 用户管理 -->
     <div :ref="tabs[0].refName" class="scroll-item">
-      <div class="line-name">
-        <h2>{{ tabs[0].name }}</h2>
-      </div>
       <div>
         <about></about>
       </div>
@@ -47,7 +44,6 @@
     <div
       :ref="tabs[2].refName"
       class="scroll-item"
-      style="padding-top: 1rem; top: 5px"
     >
       <div class="line-name">
         <h2>{{ tabs[2].name }}</h2>
@@ -60,7 +56,6 @@
     <div
       :ref="tabs[3].refName"
       class="scroll-item"
-      style="padding-top: 1rem; top: 5px"
     >
       <div class="line-name">
         <h2>{{ tabs[3].name }}</h2>
@@ -73,7 +68,6 @@
     <div
       :ref="tabs[4].refName"
       class="scroll-item"
-      style="padding-top: 1rem; top: 5px"
     >
       <div class="line-name">
         <h2>{{ tabs[4].name }}</h2>
@@ -97,7 +91,7 @@ export default {
     return {
       tabIndex: "0",
       contentStyleObj: {
-        height: "100px",
+        height: "200px",
       },
       tabName: "ABOUT",
       tabs: [
@@ -161,7 +155,7 @@ export default {
         if (distance < totalY) {
           distance += step;
           element.scrollTop = distance;
-          setTimeout(smoothDown.bind(this, element), 10);
+          setTimeout(smoothDown.bind(this, element), 6);
         } else {
           element.scrollTop = totalY;
         }
@@ -172,7 +166,7 @@ export default {
         if (distance > totalY) {
           distance -= step;
           element.scrollTop = distance;
-          setTimeout(smoothUp.bind(this, element), 10);
+          setTimeout(smoothUp.bind(this, element), 6);
         } else {
           element.scrollTop = totalY;
         }
@@ -185,7 +179,7 @@ export default {
         // 判断滚动条滚动距离是否大于当前滚动项可滚动距离
         let judge =
           e.target.scrollTop >=
-          scrollItems[i].offsetTop - scrollItems[0].offsetTop - 400;
+          scrollItems[i].offsetTop - scrollItems[0].offsetTop - 450;
         if (judge) {
           this.tabIndex = i.toString();
           // 找对应的tab-name值
@@ -195,7 +189,7 @@ export default {
       }
     },
     getHight() {
-      this.contentStyleObj.height = window.innerHeight - 190 + "px";
+      this.contentStyleObj.height = window.innerHeight - 120 + "px";
     },
   },
 };
@@ -215,14 +209,14 @@ export default {
 }
 
 .scroll-content{
-    margin-top: 50px;
+    margin-top: 30px;
     overflow-x: hidden; 
     overflow-y: auto;
 }
 
-.scroll-item{
-    width: 100%;
-}
+// .scroll-item{
+//     width: 100%;
+// }
 
 ::v-deep.el-tabs--card > .el-tabs__header {
   border-bottom: none;

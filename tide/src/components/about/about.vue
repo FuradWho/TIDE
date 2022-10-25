@@ -1,6 +1,8 @@
 <template>
   <div class="P-about">
-    <h1>这是关于页面</h1>
+    <div>
+        <img src="../../assets/LANDING PAGE/Landing Page背景.png" style="width:100%;" />
+    </div>
   </div>
 </template>
 
@@ -9,7 +11,7 @@ export default {};
 </script>
 
 <style scoped>
-.P-about{
-    height: 1000px;
+.P-about {
+  height: 1000px;
 }
 </style>
