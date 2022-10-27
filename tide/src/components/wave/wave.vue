@@ -21,7 +21,7 @@ export default {
   },
   mounted() {
     this.wavePlay("wave1", 140, "hsl(208.03, 54.58%, 50.78%)", 1500);
-    this.wavePlay("wave2", 150, "hsl(192.81, 37.87%, 46.08%)", 3000);
+    this.wavePlay("wave2", 150, "hsl(192.81, 37.87%, 49.08%)", 3000);
     this.wavePlay("wave3", 130, "hsl(208.03, 54.58%, 50.78%)", 3500);
   },
   methods: {
