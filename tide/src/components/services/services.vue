@@ -2,7 +2,7 @@
   <div class="P-about">
     <div style="position: relative">
       <img
-        src="../../assets/SERVICES/线条插图-1.png"
+        src="../../assets/SERVICES/service-1.png"
         style="width: 100%; position: absolute"
       />
       <div
