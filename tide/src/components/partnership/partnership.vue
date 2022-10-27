@@ -63,7 +63,7 @@
       />
 
       <img
-        src="../../assets/PARTNERSHIPS/LOGO/Planet Sandbox.png"
+        src="../../assets/PARTNERSHIPS/LOGO/ps.png"
         style="position: absolute; width: 200px; top: 385px; left: 1110px"
       />
 

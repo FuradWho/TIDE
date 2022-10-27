@@ -27,11 +27,11 @@
 
       <div>
         <img
-          src="../../assets/ABOUT US/圆点插图-2.png"
+          src="../../assets/ABOUTUS/圆点插图-2.png"
           style="position: absolute; width: 362px; top: 40px; left: 1580px"
         />
         <img
-          src="../../assets/ABOUT US/圆点插图-3.png"
+          src="../../assets/ABOUTUS/圆点插图-3.png"
           style="position: absolute; width: 462px; top: 40px; left: 1630px"
         />
       </div>
@@ -66,14 +66,14 @@
 
       <div>
         <img
-          src="../../assets/ABOUT US/插图-1.png"
+          src="../../assets/ABOUTUS/插图-1.png"
           style="position: absolute; width: 640px; top: 300px; left: 255px"
         />
       </div>
 
       <div>
         <img
-          src="../../assets/ABOUT US/圆点插图-4.png"
+          src="../../assets/ABOUTUS/圆点插图-4.png"
           style="
             position: absolute;
             width: 300px;

@@ -18,6 +18,7 @@
       ></el-tab-pane>
     </el-tabs>
   </div>
+
   <div
     class="scroll-content"
     @scroll="onScroll"
@@ -50,8 +51,81 @@
         <team></team>
       </div>
     </div>
+
     
-    <div style="width: 100%;height:414px;background-color:#3D86C6;">
+    <img src="../../assets/FOOTER/1.png" style="width: 73px; position:fixed;right:150px;bottom:100px;z-index: 2;" v-on:click="top"/>
+
+    <div style="width: 100%;height:420px;background-color:#3D86C6;position: relative;">
+      <img  src="../../assets/FOOTER/LOGO（WHT）.png"
+          style="position: absolute; width: 190px; top: 80px; left: 190px"/>
+      <div style="position: absolute;top: 375px; left: 190px">
+        <span style="font-size: 14px;color: white;">© 2022 TIDE Groups All Rights Reserved.</span>
+      </div>
+
+      <div  style="position: absolute;top: 80px; left: 1200px">
+        <span style="font-size: 24px;color: white;">CONNECT</span>
+      </div>
+
+      <div  style="position: absolute;top: 110px; left: 1200px">
+        <span style="font-size: 24px;color: white;">WITH</span>
+      </div>
+
+      <div  style="position: absolute;top: 140px; left: 1200px">
+        <span style="font-size: 24px;color: white;">US</span>
+      </div>
+
+      <div  style="position: absolute;top: 80px; left: 1470px">
+        <img src="../../assets/FOOTER/Twitter.png" style="width: 20px;"/>
+      </div>
+      <div  style="position: absolute;top: 80px; left: 1500px">
+        <span style="font-size: 20px;color: white">Twitter</span>
+      </div>
+
+      <div  style="position: absolute;top: 110px; left: 1470px">
+        <img src="../../assets/FOOTER/Telegram.png" style="width: 20px;"/>
+      </div>
+      <div  style="position: absolute;top: 110px; left: 1500px">
+        <span style="font-size: 20px;color: white">Telegram</span>
+      </div>
+
+      <div  style="position: absolute;top: 140px; left: 1470px">
+        <img src="../../assets/FOOTER/Email.png" style="width: 20px;"/>
+      </div>
+      <div  style="position: absolute;top: 140px; left: 1500px">
+        <span style="font-size: 20px;color: white">Email</span>
+      </div>
+
+      <div  style="position: absolute;top: 80px; left: 1770px">
+        <span style="font-size: 20px;color: white">About</span>
+      </div>
+      <div  style="position: absolute;top: 110px; left: 1770px">
+        <span style="font-size: 20px;color: white">Market Making</span>
+      </div>
+      <div  style="position: absolute;top: 140px; left: 1770px">
+        <span style="font-size: 20px;color: white" >Services</span>
+      </div>
+      <div  style="position: absolute;top: 170px; left: 1770px">
+        <span style="font-size: 20px;color: white" >Partnerships</span>
+      </div>
+      <div  style="position: absolute;top: 200px; left: 1770px">
+        <span style="font-size: 20px;color: white" >Our Team</span>
+      </div>
+
+      <div  style="position: absolute;top: 85px; left: 590px">
+        <input style="background-color: transparent;border-color: white;border-radius: 5px;width: 300px;height: 30px;" placeholder="NAME"/>
+      </div>
+      <div  style="position: absolute;top: 140px; left: 590px">
+        <input style="background-color: transparent;border-color: white;border-radius: 5px;width: 300px;height: 30px;" placeholder="EMAIL"/>
+      </div>
+
+      <div  style="position: absolute;top: 195px; left: 590px">
+        <textarea  style="background-color: transparent;border-color: white;border-radius: 5px;width: 300px;height: 120px;" placeholder="LEAVE US A MESSAGE"/>
+      </div>
+
+      <div  style="position: absolute;top: 290px; left: 920px">
+        <img src="../../assets/FOOTER/Submit（点击前）.png" style="width: 30px;"/>
+      </div>
+
     </div>
   </div>
 </template>
@@ -62,6 +136,8 @@ import market from "../market/market.vue";
 import partnership from "../partnership/partnership.vue";
 import services from "../services/services.vue";
 import team from "../team/team.vue";
+import wave from '../wave/wave.vue';
+
 export default {
   name: "index",
   props: {},
@@ -70,7 +146,8 @@ export default {
     market,
     partnership,
     services,
-    team
+    team,
+    wave
   },
   data() {
     return {
@@ -176,6 +253,9 @@ export default {
     getHight() {
       this.contentStyleObj.height = window.innerHeight - 120 + "px";
     },
+    top : function (){
+      this.jump({"index":0},0);
+    }
   },
 };
 </script>
@@ -193,6 +273,9 @@ export default {
   margin-top: 26px;
 }
 
+::-webkit-input-placeholder{
+  color:white;
+}
 .scroll-content {
   margin-top: 30px;
   overflow-x: hidden;

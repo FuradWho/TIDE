@@ -28,7 +28,7 @@
         </div>
         <div>
           <img
-            src="../../assets/L/Submit Project方框.png"
+            src="../../assets/L/SubmitProject.png"
             style="position: absolute; width: 220px; top: 618px; left: 194px"
           />
         </div>
