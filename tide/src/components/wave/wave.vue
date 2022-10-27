@@ -1,7 +1,6 @@
 <template>
   <div>
     <div id="wave" :style="`height:${waveAllHeight}px`">
-      <h1>wave</h1>
       <div class="wave-box">
         <canvas id="wave1"></canvas>
         <canvas id="wave2"></canvas>
@@ -11,7 +10,7 @@
   </div>
 </template>
   
-  <script>
+<script>
 export default {
   data() {
     return {
@@ -21,9 +20,9 @@ export default {
     };
   },
   mounted() {
-    this.wavePlay("wave1", 140, "hsl(210.69, 57.71%, 55.49%)", 1500);
+    this.wavePlay("wave1", 140, "hsl(208.03, 54.58%, 50.78%)", 1500);
     this.wavePlay("wave2", 150, "hsl(192.81, 37.87%, 46.08%)", 3000);
-    this.wavePlay("wave3", 130, "hsl(210.69, 57.71%, 55.49%)", 3500);
+    this.wavePlay("wave3", 130, "hsl(208.03, 54.58%, 50.78%)", 3500);
   },
   methods: {
     //  * 底部波浪
@@ -47,7 +46,7 @@ export default {
         hd = d / 2,
         c = document.getElementById($canvasID),
         ctx = c.getContext("2d");
-      c.width = 1920; //画布宽度
+      c.width = 2320; //画布宽度
       c.height = _this.waveAllHeight; //画布高度
       function move() {
         offset -= 5;
@@ -89,12 +88,13 @@ export default {
 };
 </script>
   
-  <style lang="scss" scoped>
+<style lang="scss" scoped>
 #wave {
   width: 100%;
   overflow: hidden;
   position: absolute;
   bottom: 0;
+
   h1 {
     text-align: center;
     color: white;
@@ -104,6 +104,7 @@ export default {
     line-height: 330px;
   }
 }
+
 .wave-box {
   //   transform: scaleY(-1); //翻转波浪位置
   width: 120%;
@@ -113,6 +114,7 @@ export default {
   left: 0;
   z-index: -1;
 }
+
 canvas {
   opacity: 0.5;
   position: absolute;

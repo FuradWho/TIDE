@@ -5,27 +5,23 @@
         src="../../assets/PARTNERSHIPS/线条插图-3.png"
         style="width: 100%; position: absolute"
       /> -->
-      <div
-        style="
+      <div style="
           font-size: 20px;
           font-weight: bold;
           position: absolute;
           top: 40px;
           left: 995px;
-        "
-      >
+        ">
         <span>OUR TEAM</span>
       </div>
 
-      <div
-        style="
+      <div style="
           font-size: 20px;
           font-weight: bold;
           position: absolute;
           top: 58px;
           left: 1030px;
-        "
-      >
+        ">
         <span>——</span>
       </div>
       <div style="position: absolute; top: 218px; width: 50%; left: 510px">
@@ -36,19 +32,19 @@
         </el-carousel>
       </div>
 
-      <div style="position: absolute;top: 1200px; width:2020px; ">
-      <wave style="width:2000px;height: 100px;"></wave>
-    </div>
+      <div style="position: absolute;top: 1200px; width:100%; ">
+        <wave style="width:1920px;height: 100px;"></wave>
+      </div>
     </div>
   </div>
 </template>
   
-  <script>
-  import wave from '../wave/wave.vue';
+<script>
+import wave from '../wave/wave.vue';
 export default {};
 </script>
   
-  <style scoped>
+<style scoped>
 .P-about {
   height: 1300px;
 }

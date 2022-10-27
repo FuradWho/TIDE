@@ -3,27 +3,13 @@
     <div style="float: left; width: 100px; margin-left: 180px">
       <img class="logo" src="../../assets/LOGO/logo.png" style="width: 200px" />
     </div>
-    <el-tabs
-      class="customer-tab"
-      type="card"
-      @tab-click="jump"
-      v-model="tabName"
-    >
-      <el-tab-pane
-        class="e-tab-item"
-        v-for="(tab, index) in tabs"
-        :name="tab.refName"
-        :key="index"
-        :label="tab.name"
-      ></el-tab-pane>
+    <el-tabs class="customer-tab" type="card" @tab-click="jump" v-model="tabName">
+      <el-tab-pane class="e-tab-item" v-for="(tab, index) in tabs" :name="tab.refName" :key="index" :label="tab.name">
+      </el-tab-pane>
     </el-tabs>
   </div>
 
-  <div
-    class="scroll-content"
-    @scroll="onScroll"
-    :style="'height:' + contentStyleObj.height"
-  >
+  <div class="scroll-content" @scroll="onScroll" :style="'height:' + contentStyleObj.height">
     <div :ref="tabs[0].refName" class="scroll-item">
       <div>
         <about></about>
@@ -52,78 +38,82 @@
       </div>
     </div>
 
-    
-    <img src="../../assets/FOOTER/1.png" style="width: 73px; position:fixed;right:150px;bottom:100px;z-index: 2;" v-on:click="top"/>
+
+    <img src="../../assets/FOOTER/1.png" style="width: 73px; position:fixed;right:150px;bottom:100px;z-index: 2;"
+      v-on:click="top" />
 
     <div style="width: 100%;height:420px;background-color:#3D86C6;position: relative;">
-      <img  src="../../assets/FOOTER/LOGO（WHT）.png"
-          style="position: absolute; width: 190px; top: 80px; left: 190px"/>
+      <img src="../../assets/FOOTER/LOGO（WHT）.png" style="position: absolute; width: 190px; top: 80px; left: 190px" />
       <div style="position: absolute;top: 375px; left: 190px">
         <span style="font-size: 14px;color: white;">© 2022 TIDE Groups All Rights Reserved.</span>
       </div>
 
-      <div  style="position: absolute;top: 80px; left: 1200px">
+      <div style="position: absolute;top: 80px; left: 1200px">
         <span style="font-size: 24px;color: white;">CONNECT</span>
       </div>
 
-      <div  style="position: absolute;top: 110px; left: 1200px">
+      <div style="position: absolute;top: 110px; left: 1200px">
         <span style="font-size: 24px;color: white;">WITH</span>
       </div>
 
-      <div  style="position: absolute;top: 140px; left: 1200px">
+      <div style="position: absolute;top: 140px; left: 1200px">
         <span style="font-size: 24px;color: white;">US</span>
       </div>
 
-      <div  style="position: absolute;top: 80px; left: 1470px">
-        <img src="../../assets/FOOTER/Twitter.png" style="width: 20px;"/>
+      <div style="position: absolute;top: 80px; left: 1470px">
+        <img src="../../assets/FOOTER/Twitter.png" style="width: 20px;" />
       </div>
-      <div  style="position: absolute;top: 80px; left: 1500px">
+      <div style="position: absolute;top: 80px; left: 1500px">
         <span style="font-size: 20px;color: white">Twitter</span>
       </div>
 
-      <div  style="position: absolute;top: 110px; left: 1470px">
-        <img src="../../assets/FOOTER/Telegram.png" style="width: 20px;"/>
+      <div style="position: absolute;top: 110px; left: 1470px">
+        <img src="../../assets/FOOTER/Telegram.png" style="width: 20px;" />
       </div>
-      <div  style="position: absolute;top: 110px; left: 1500px">
+      <div style="position: absolute;top: 110px; left: 1500px">
         <span style="font-size: 20px;color: white">Telegram</span>
       </div>
 
-      <div  style="position: absolute;top: 140px; left: 1470px">
-        <img src="../../assets/FOOTER/Email.png" style="width: 20px;"/>
+      <div style="position: absolute;top: 140px; left: 1470px">
+        <img src="../../assets/FOOTER/Email.png" style="width: 20px;" />
       </div>
-      <div  style="position: absolute;top: 140px; left: 1500px">
+      <div style="position: absolute;top: 140px; left: 1500px">
         <span style="font-size: 20px;color: white">Email</span>
       </div>
 
-      <div  style="position: absolute;top: 80px; left: 1770px">
+      <div style="position: absolute;top: 80px; left: 1770px">
         <span style="font-size: 20px;color: white">About</span>
       </div>
-      <div  style="position: absolute;top: 110px; left: 1770px">
+      <div style="position: absolute;top: 110px; left: 1770px">
         <span style="font-size: 20px;color: white">Market Making</span>
       </div>
-      <div  style="position: absolute;top: 140px; left: 1770px">
-        <span style="font-size: 20px;color: white" >Services</span>
+      <div style="position: absolute;top: 140px; left: 1770px">
+        <span style="font-size: 20px;color: white">Services</span>
       </div>
-      <div  style="position: absolute;top: 170px; left: 1770px">
-        <span style="font-size: 20px;color: white" >Partnerships</span>
+      <div style="position: absolute;top: 170px; left: 1770px">
+        <span style="font-size: 20px;color: white">Partnerships</span>
       </div>
-      <div  style="position: absolute;top: 200px; left: 1770px">
-        <span style="font-size: 20px;color: white" >Our Team</span>
-      </div>
-
-      <div  style="position: absolute;top: 85px; left: 590px">
-        <input style="background-color: transparent;border-color: white;border-radius: 5px;width: 300px;height: 30px;" placeholder="NAME"/>
-      </div>
-      <div  style="position: absolute;top: 140px; left: 590px">
-        <input style="background-color: transparent;border-color: white;border-radius: 5px;width: 300px;height: 30px;" placeholder="EMAIL"/>
+      <div style="position: absolute;top: 200px; left: 1770px">
+        <span style="font-size: 20px;color: white">Our Team</span>
       </div>
 
-      <div  style="position: absolute;top: 195px; left: 590px">
-        <textarea  style="background-color: transparent;border-color: white;border-radius: 5px;width: 300px;height: 120px;" placeholder="LEAVE US A MESSAGE"/>
+      <div style="position: absolute;top: 85px; left: 590px">
+        <input style="background-color: transparent;border-color: white;border-radius: 5px;width: 300px;height: 30px;"
+          placeholder="NAME" />
+      </div>
+      <div style="position: absolute;top: 140px; left: 590px">
+        <input style="background-color: transparent;border-color: white;border-radius: 5px;width: 300px;height: 30px;"
+          placeholder="EMAIL" />
       </div>
 
-      <div  style="position: absolute;top: 290px; left: 920px">
-        <img src="../../assets/FOOTER/Submit（点击前）.png" style="width: 30px;"/>
+      <div style="position: absolute;top: 195px; left: 590px">
+        <textarea
+          style="background-color: transparent;border-color: white;border-radius: 5px;width: 300px;height: 120px;"
+          placeholder="LEAVE US A MESSAGE" />
+      </div>
+
+      <div style="position: absolute;top: 290px; left: 920px">
+        <img src="../../assets/FOOTER/Submit（点击前）.png" style="width: 30px;" />
       </div>
 
     </div>
@@ -253,8 +243,8 @@ export default {
     getHight() {
       this.contentStyleObj.height = window.innerHeight - 120 + "px";
     },
-    top : function (){
-      this.jump({"index":0},0);
+    top: function () {
+      this.jump({ "index": 0 }, 0);
     }
   },
 };
@@ -273,28 +263,31 @@ export default {
   margin-top: 26px;
 }
 
-::-webkit-input-placeholder{
-  color:white;
+::-webkit-input-placeholder {
+  color: white;
 }
+
 .scroll-content {
   margin-top: 30px;
   overflow-x: hidden;
   overflow-y: auto;
-  padding-bottom:25px;
+  padding-bottom: 25px;
 }
 
 // .scroll-item{
 //     width: 100%;
 // }
 
-::v-deep.el-tabs--card > .el-tabs__header {
+::v-deep.el-tabs--card>.el-tabs__header {
   border-bottom: none;
   margin: 0;
+
   .el-tabs__nav {
     // width: 70%;
     display: flex;
     justify-content: space-around;
     border: none;
+
     .el-tabs__item {
       width: 200px;
       text-align: center;
@@ -302,6 +295,7 @@ export default {
       font-weight: bold;
       //   font-size: 20px;
     }
+
     .is-active {
       border-radius: 45px;
       background-color: #3D86C6;

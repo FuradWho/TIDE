@@ -5,7 +5,7 @@ import home from './components/home/home.vue'
 </script>
 
 <template>
-  <home/>
+  <home />
 </template>
 
 <style>
@@ -14,7 +14,8 @@ import home from './components/home/home.vue'
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body{
+
+body {
   margin: 0;
   overflow: hidden;
 }
