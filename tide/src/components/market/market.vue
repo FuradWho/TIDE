@@ -1,6 +1,6 @@
 <template>
   <div class="P-about">
-    <div style="position: relative">
+    <div style="position: relative;display: flex;">
       <div style="
           font-size: 20px;
           font-weight: bold;

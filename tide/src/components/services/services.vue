@@ -175,8 +175,8 @@
         </div>
       </div>
 
-      <div>
-        <img src="../../assets/SERVICES/Product and OA/Product and OA-3.png" style="
+      <div class="da">
+        <img class="oa" src="../../assets/SERVICES/Product and OA/Product and OA.png" style="
             position: absolute;
             width: 108px;
             top: 1330px;
@@ -215,6 +215,14 @@ export default {};
 <style scoped>
 .P-about {
   height: 1700px;
+}
+
+.da:hover .oa {
+  content: url("../../assets/SERVICES/Product and OA/Product and OA-3.png");
+  transform: scale(1.06); 
+  transition: all 1s;
+    /* opacity:0;
+    filter: alpha(opacity=0); */
 }
 </style>
   
